@@ -34,7 +34,6 @@
   }
   const activate = () => {
     if (!canSubmit || !photoLoaded) return;
-    byId('draft').hidden = approved;
     form.removeAttribute('inert');
     fields.disabled = false;
     form.action = c.formEndpoint;
