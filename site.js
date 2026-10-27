@@ -30,7 +30,7 @@
     byId('processors').textContent = c.privacy.processors;
     byId('privacy-contact').textContent = c.privacy.contact;
     ['controller', 'legal-basis', 'retention', 'processors', 'privacy-contact'].forEach(id => { byId(id).hidden = false; });
-    byId('privacy-draft').hidden = true;
+    if (byId('privacy-draft')) byId('privacy-draft').hidden = true;
   }
   const activate = () => {
     if (!canSubmit || !photoLoaded) return;
